@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{A5F999B9-FD02-4559-8DC0-389EF0DFE8B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EosMonitoringApp.Domain.Entities", "EosMonitoringApp.Domain.Entities\EosMonitoringApp.Domain.Entities.csproj", "{B42C9717-4C37-4B54-9723-52B37A0EABA2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EosMonitoringApp.Domain.Interfaces", "EosMonitoringApp.Domain.Interfaces\EosMonitoringApp.Domain.Interfaces.csproj", "{BFA202E2-4D1E-4368-BD1B-B492439436D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{F5BB4F46-9C2E-4C6E-AF26-527FC2637725}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{34EBC630-C492-4A18-97CE-1C0BD1ACD185}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{E0D9E86E-1CD7-46D9-A0E1-FD89019AFA59}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EosMonitoringApp.Infrastructure.Data", "EosMonitoringApp.Infrastructure.Data\EosMonitoringApp.Infrastructure.Data.csproj", "{19F02179-D5B9-4E1B-8EFC-58D0C31D9F30}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EosMonitoringApp.Services.Interfaces", "EosMonitoringApp.Services.Interfaces\EosMonitoringApp.Services.Interfaces.csproj", "{9AAC5306-30FD-4409-9388-5EA05B27FA19}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EosMonitoringApp.Presentation.ViewModels", "EosMonitoringApp.Presentation.ViewModels\EosMonitoringApp.Presentation.ViewModels.csproj", "{AC7EFEAE-6808-4E28-B278-79F30A4D527B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EosMonitoringApp.Presentation.Views", "EosMonitoringApp.Presentation.Views\EosMonitoringApp.Presentation.Views.csproj", "{1B8C40BD-EE6A-4566-96B5-19060C74E1D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EosMonitoringApp.Services.AppServices", "EosMonitoringApp.Services.AppServices\EosMonitoringApp.Services.AppServices.csproj", "{781C2015-9CA5-4E1A-8E1A-17BBE7DA9CED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B42C9717-4C37-4B54-9723-52B37A0EABA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B42C9717-4C37-4B54-9723-52B37A0EABA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B42C9717-4C37-4B54-9723-52B37A0EABA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B42C9717-4C37-4B54-9723-52B37A0EABA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFA202E2-4D1E-4368-BD1B-B492439436D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFA202E2-4D1E-4368-BD1B-B492439436D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFA202E2-4D1E-4368-BD1B-B492439436D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFA202E2-4D1E-4368-BD1B-B492439436D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F02179-D5B9-4E1B-8EFC-58D0C31D9F30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F02179-D5B9-4E1B-8EFC-58D0C31D9F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F02179-D5B9-4E1B-8EFC-58D0C31D9F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F02179-D5B9-4E1B-8EFC-58D0C31D9F30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AAC5306-30FD-4409-9388-5EA05B27FA19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AAC5306-30FD-4409-9388-5EA05B27FA19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AAC5306-30FD-4409-9388-5EA05B27FA19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AAC5306-30FD-4409-9388-5EA05B27FA19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC7EFEAE-6808-4E28-B278-79F30A4D527B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC7EFEAE-6808-4E28-B278-79F30A4D527B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC7EFEAE-6808-4E28-B278-79F30A4D527B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC7EFEAE-6808-4E28-B278-79F30A4D527B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B8C40BD-EE6A-4566-96B5-19060C74E1D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B8C40BD-EE6A-4566-96B5-19060C74E1D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B8C40BD-EE6A-4566-96B5-19060C74E1D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B8C40BD-EE6A-4566-96B5-19060C74E1D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{781C2015-9CA5-4E1A-8E1A-17BBE7DA9CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{781C2015-9CA5-4E1A-8E1A-17BBE7DA9CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{781C2015-9CA5-4E1A-8E1A-17BBE7DA9CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{781C2015-9CA5-4E1A-8E1A-17BBE7DA9CED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B42C9717-4C37-4B54-9723-52B37A0EABA2} = {A5F999B9-FD02-4559-8DC0-389EF0DFE8B5}
+		{BFA202E2-4D1E-4368-BD1B-B492439436D7} = {A5F999B9-FD02-4559-8DC0-389EF0DFE8B5}
+		{19F02179-D5B9-4E1B-8EFC-58D0C31D9F30} = {34EBC630-C492-4A18-97CE-1C0BD1ACD185}
+		{9AAC5306-30FD-4409-9388-5EA05B27FA19} = {F5BB4F46-9C2E-4C6E-AF26-527FC2637725}
+		{AC7EFEAE-6808-4E28-B278-79F30A4D527B} = {E0D9E86E-1CD7-46D9-A0E1-FD89019AFA59}
+		{1B8C40BD-EE6A-4566-96B5-19060C74E1D7} = {E0D9E86E-1CD7-46D9-A0E1-FD89019AFA59}
+		{781C2015-9CA5-4E1A-8E1A-17BBE7DA9CED} = {F5BB4F46-9C2E-4C6E-AF26-527FC2637725}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1F6B081-E9C3-4391-9695-323D9FC2DEA2}
+	EndGlobalSection
+EndGlobal

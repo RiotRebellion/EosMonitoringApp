@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EosMonitoringApp.Domain.Entities\EosMonitoringApp.Domain.Entities.csproj" />
+    <ProjectReference Include="..\EosMonitoringApp.Domain.Interfaces\EosMonitoringApp.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\EosMonitoringApp.Services.Interfaces\EosMonitoringApp.Services.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

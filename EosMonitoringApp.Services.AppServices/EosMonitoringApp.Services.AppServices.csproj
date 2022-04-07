@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EosMonitoringApp.Domain.Interfaces\EosMonitoringApp.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\EosMonitoringApp.Services.Interfaces\EosMonitoringApp.Services.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

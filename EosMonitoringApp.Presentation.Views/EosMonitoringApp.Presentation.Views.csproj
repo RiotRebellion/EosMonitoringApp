@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EosMonitoringApp.Infrastructure.Data\EosMonitoringApp.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\EosMonitoringApp.Presentation.ViewModels\EosMonitoringApp.Presentation.ViewModels.csproj" />
+    <ProjectReference Include="..\EosMonitoringApp.Services.AppServices\EosMonitoringApp.Services.AppServices.csproj" />
+    <ProjectReference Include="..\EosMonitoringApp.Services.Interfaces\EosMonitoringApp.Services.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
