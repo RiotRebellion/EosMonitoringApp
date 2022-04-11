@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace EosMonitoringApp.Services.Interfaces
 {
-    public interface IMiraDbContext
+    public interface IMiraDbContext : IDbContext
     {
-        DbSet<Employee> Employees { get; set; }
+
     }
 }

@@ -12,19 +12,15 @@ namespace EosMonitoringApp.Infrastructure.Data.Repositories
 {
     public class CabinetRepository : IGenericRepository<Cabinet>
     {
-        private readonly IDeloDbContext _context;
-        private DbSet<Cabinet> _dbSet;
-        private string _query;
+        private readonly DbSet<Cabinet> _dbSet;
+        private readonly string _query =
+            "";
 
         public CabinetRepository(IDeloDbContext context)
         {
-            _context = context;
-            _dbSet = context.Cabinets;
+            _dbSet = context.Set<Cabinet>();
         }
 
-        public IQueryable<Cabinet> GetAll()
-        {
-            throw new NotImplementedException();
-        }
+        public IQueryable<Cabinet> GetAll() => _dbSet.FromSqlRaw(_query);
     }
 }

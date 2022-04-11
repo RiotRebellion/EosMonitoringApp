@@ -12,14 +12,12 @@ namespace EosMonitoringApp.Infrastructure.Data.Repositories
 {
     public class EmployeeRepository : IGenericRepository<Employee>
     {
-        private readonly IMiraDbContext _context;
         private DbSet<Employee> _dbSet;
         private string _query;
 
         public EmployeeRepository(IMiraDbContext context)
         {
-            _context = context;
-            _dbSet = context.Employees;
+            _dbSet = context.Set<Employee>();
         }
 
         public IQueryable<Employee> GetAll()

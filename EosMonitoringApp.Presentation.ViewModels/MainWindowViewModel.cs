@@ -1,32 +1,36 @@
 ﻿using EosMonitoringApp.Domain.Entities;
-using EosMonitoringApp.Domain.Interfaces;
 using EosMonitoringApp.Presentation.ViewModels.Common;
 using EosMonitoringApp.Services.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace EosMonitoringApp.Presentation.ViewModels
 {
     public class MainWindowViewModel : ViewModel
     {
-        public MainWindowViewModel(IService<AccountActivity> service)
+        public MainWindowViewModel(ILoadService<AccountActivity> service)
         {
-            AccountActivities = service.Process();
+            var temp = service.Process();
+            _accountActivities = temp;
         }
 
-        #region
+        #region AccountActivities
 
-        private IEnumerable<AccountActivity> _accountActivities;
+        private ObservableCollection<AccountActivity> _accountActivities;
 
-        public IEnumerable<AccountActivity> AccountActivities
+        public ObservableCollection<AccountActivity> AccountActivities
         {
             get => _accountActivities;
             set => Set(ref _accountActivities, value);
         }
 
         #endregion
+
+        #region
+
+
+
+        #endregion
+
     }
 }

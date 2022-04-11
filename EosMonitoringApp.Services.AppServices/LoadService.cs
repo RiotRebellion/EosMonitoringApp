@@ -4,13 +4,14 @@ using EosMonitoringApp.Domain.Interfaces;
 using EosMonitoringApp.Services.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace EosMonitoringApp.Services.AppServices
 {
-    public class LoadService<T> : IService<T> where T: IEntity
+    public class LoadService<T> : ILoadService<T> where T: IEntity
     {
         private readonly IGenericRepository<T> _repository;
 
@@ -19,9 +20,9 @@ namespace EosMonitoringApp.Services.AppServices
             _repository = Repository;
         }
 
-        public IEnumerable<T> Process()
+        public ObservableCollection<T> Process()
         {
-            IEnumerable<T> accounts = _repository.GetAll();
+            ObservableCollection<T> accounts = new ObservableCollection<T>(_repository.GetAll());
             return accounts;
         }
     }

@@ -9,12 +9,11 @@ using System.Threading.Tasks;
 
 namespace EosMonitoringApp.Infrastructure.Data.Context
 {
-    public class DeloDbContext : DbContext, IDeloDbContext
+    public partial class DeloDbContext : DbContext, IDeloDbContext
     {
         public DeloDbContext(DbContextOptions options)
             : base(options)
         {
-
         }
 
         public DbSet<Account> Accounts { get; set; }
@@ -22,5 +21,12 @@ namespace EosMonitoringApp.Infrastructure.Data.Context
         public DbSet<AccountActivity> AccountActivities { get; set; }
 
         public DbSet<Cabinet> Cabinets { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Account>().HasNoKey();
+            modelBuilder.Entity<AccountActivity>().HasNoKey();
+            modelBuilder.Entity<Cabinet>().HasNoKey();
+        }
     }
 }

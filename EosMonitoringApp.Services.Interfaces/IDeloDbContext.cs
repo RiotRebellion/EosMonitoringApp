@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace EosMonitoringApp.Services.Interfaces
 {
-    public interface IDeloDbContext
+    public interface IDeloDbContext : IDbContext
     {
-        DbSet<Account> Accounts { get; set; }
-        DbSet<AccountActivity> AccountActivities { get; set; }
-        DbSet<Cabinet> Cabinets { get; set; }
+        
     }
 }

@@ -9,8 +9,36 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid DataContext="{Binding AccountActivities}">
-            
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition 
+                Height="50pt"/>
+        </Grid.RowDefinitions>
+        <DataGrid 
+            ItemsSource="{Binding AccountActivities}"
+            AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn 
+                    Width="*" 
+                    Header="Пользователь"                                    
+                    Binding="{Binding AccountName}"/>
+                <DataGridTextColumn 
+                    Header="Дата последней авторизации"                 
+                    Binding="{Binding LastAutorizationDate}"                                   
+                    CanUserSort="True"/>
+                <DataGridTextColumn 
+                    Header="Дней прошло"                         
+                    Binding="{Binding DaysGone}"
+                    CanUserSort="True"/>
+            </DataGrid.Columns>
         </DataGrid>
+        <StackPanel 
+            Grid.Row="1"        
+            HorizontalAlignment="Right"    
+            VerticalAlignment="Center">
+            <Button 
+                Height="25" 
+                Width="50"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -12,16 +12,14 @@ namespace EosMonitoringApp.Infrastructure.Data.Repositories
 {
     public class AccountRepository : IGenericRepository<Account>
     {
-        private readonly IDeloDbContext _context;
-        private DbSet<Account> _dbSet;
-        private string _query = "";
+        private readonly DbSet<Account> _dbSet;
+        private readonly string _query = "";
 
         public AccountRepository(IDeloDbContext context)
         {
-            _context = context;
-            _dbSet = context.Accounts;
+            _dbSet = context.Set<Account>();
         }
 
-        public IQueryable<Account> GetAll() => throw new NotImplementedException();
+        public IQueryable<Account> GetAll() => _dbSet.FromSqlRaw(_query);
     }
 }
