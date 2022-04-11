@@ -21,9 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EosMonitoringApp.Services.I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EosMonitoringApp.Presentation.ViewModels", "EosMonitoringApp.Presentation.ViewModels\EosMonitoringApp.Presentation.ViewModels.csproj", "{AC7EFEAE-6808-4E28-B278-79F30A4D527B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EosMonitoringApp.Presentation.Views", "EosMonitoringApp.Presentation.Views\EosMonitoringApp.Presentation.Views.csproj", "{1B8C40BD-EE6A-4566-96B5-19060C74E1D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EosMonitoringApp.Presentation.Views", "EosMonitoringApp.Presentation.Views\EosMonitoringApp.Presentation.Views.csproj", "{1B8C40BD-EE6A-4566-96B5-19060C74E1D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EosMonitoringApp.Services.AppServices", "EosMonitoringApp.Services.AppServices\EosMonitoringApp.Services.AppServices.csproj", "{781C2015-9CA5-4E1A-8E1A-17BBE7DA9CED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EosMonitoringApp.Services.AppServices", "EosMonitoringApp.Services.AppServices\EosMonitoringApp.Services.AppServices.csproj", "{781C2015-9CA5-4E1A-8E1A-17BBE7DA9CED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
