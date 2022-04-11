@@ -37,7 +37,7 @@
                         Foreground="White"
                         FontStyle="Italic"
                         FontSize="22"
-                        Margin="40,20,10,0"/>
+                        Margin="35,20,10,0"/>
                     <TextBlock 
                         Text="Выгрузка из баз"
                         VerticalAlignment="Center"
@@ -45,7 +45,7 @@
                         Foreground="White"
                         FontStyle="Italic"
                         FontSize="12"
-                        Margin="50,0,10,0"/>
+                        Margin="40,0,10,0"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel Grid.Row="1">
