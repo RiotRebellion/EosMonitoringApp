@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace EosMonitoringApp.Presentation.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for AccountActivityPage.xaml
+    /// Interaction logic for CabinetAttachmentsPage.xaml
     /// </summary>
-    public partial class AccountActivityPage : Page
+    public partial class CabinetAttachmentsPage : UserControl
     {
-        public AccountActivityPage()
+        public CabinetAttachmentsPage()
         {
             InitializeComponent();
         }

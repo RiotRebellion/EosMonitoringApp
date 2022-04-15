@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EosMonitoringApp.Presentation.ViewModels.Common
 {
-    public class ViewModel : INotifyPropertyChanged
+    public abstract class ViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 

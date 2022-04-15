@@ -2,6 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:EosMonitoringApp.Presentation.Views"
+             xmlns:pages="clr-namespace:EosMonitoringApp.Presentation.Views.Pages"
+             xmlns:viewmodels="clr-namespace:EosMonitoringApp.Presentation.ViewModels;assembly=EosMonitoringApp.Presentation.ViewModels"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -9,6 +11,10 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Themes/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/XamlImage.xaml"/>
+                <ResourceDictionary Source="Themes/HomeTextBlockTheme.xaml"/>
+                <ResourceDictionary Source="Themes/CloseButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/ExpandCollapseButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/HideButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

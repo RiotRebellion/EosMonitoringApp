@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace EosMonitoringApp.Presentation.Views
+namespace EosMonitoringApp.Presentation.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for EmployeeChangesPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EmployeeChangesPage : UserControl
     {
-        public MainWindow()
+        public EmployeeChangesPage()
         {
             InitializeComponent();
-        }
-
-        private void Grid_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
         }
     }
 }

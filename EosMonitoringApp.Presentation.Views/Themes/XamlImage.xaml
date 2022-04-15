@@ -5,7 +5,7 @@
             <Setter.Value>
                 <ControlTemplate 
                     TargetType="ContentControl">
-                    <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Name="svg1469" Width=".5" Height="50.0" HorizontalAlignment="Center"
+                    <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Name="svg1469" Width=".5" Height="50.0" HorizontalAlignment="Center" Margin="0,10,0,0"
                             VerticalAlignment="Center">
                         <Canvas.RenderTransform>
                             <TranslateTransform X="-6" Y="77"/>

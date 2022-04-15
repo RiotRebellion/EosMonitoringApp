@@ -11,5 +11,10 @@ namespace EosMonitoringApp.Presentation.Views
     public class ViewModelLocator
     {
         public MainWindowViewModel MainWindowViewModel => App.Services.GetRequiredService<MainWindowViewModel>();
+        public HomeViewModel HomeViewModel => App.Services.GetRequiredService<HomeViewModel>();
+        public AccountActivitiesViewModel AccountActivityViewModel => App.Services.GetRequiredService<AccountActivitiesViewModel>();
+        public AccountAttachmentsViewModel AccountAttachmentsViewModel => App.Services.GetRequiredService<AccountAttachmentsViewModel>();
+        public CabinetAttachmentsViewModel CabinetAttachmentsViewModel => App.Services.GetRequiredService<CabinetAttachmentsViewModel>();
+        public EmployeeChangesViewModel EmployeeChangesViewModel => App.Services.GetRequiredService<EmployeeChangesViewModel>();
     }
 }
