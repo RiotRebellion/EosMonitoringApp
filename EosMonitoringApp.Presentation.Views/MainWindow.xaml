@@ -4,17 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EosMonitoringApp.Presentation.Views"
+        xmlns:cmd="clr-namespace:EosMonitoringApp.Presentation.ViewModels.Commands;assembly=EosMonitoringApp.Presentation.ViewModels"   
         xmlns:pages="clr-namespace:EosMonitoringApp.Presentation.Views.Pages"
         xmlns:viewmodels="clr-namespace:EosMonitoringApp.Presentation.ViewModels;assembly=EosMonitoringApp.Presentation.ViewModels"
         DataContext="{Binding MainWindowViewModel, Source={StaticResource ViewModelLocator}}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" 
+        MinHeight="480" MinWidth="640"
+        MaxHeight="{x:Static SystemParameters.MaximizedPrimaryScreenHeight}"
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True">
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+        CaptionHeight="0"
+        ResizeBorderThickness="5" />
+    </WindowChrome.WindowChrome>
     <Border 
         Background="#1c212b"
-        CornerRadius="20">
+        CornerRadius="20"
+        AllowDrop="True">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150pt"/>
@@ -29,11 +38,13 @@
                 Background="#13161c"
                 CornerRadius="20"
                 Grid.ColumnSpan="2">
-                <Grid
-                    PreviewMouseLeftButtonDown="Grid_PreviewMouseLeftButtonDown">
-                    <TextBlock Margin="20,5"
-                               Foreground="White"
-                               FontSize="14">
+                <Grid MouseLeftButtonDown="Grid_OnMouseLeftButtonDown"
+                      MouseMove="Grid_OnMouseMove"
+                      MouseLeftButtonUp="Grid_OnMouseLeftButtonUp">
+                    <TextBlock 
+                        Margin="20,5"
+                        Foreground="White"       
+                        FontSize="14">
                         Выгрузка СЭД
                     </TextBlock>
                     <StackPanel
@@ -41,9 +52,21 @@
                         VerticalAlignment="Center"
                         HorizontalAlignment="Right"
                         Margin="0,0,20,0">
-                        <Button Style="{DynamicResource HideButton}"/>
-                        <Button Style="{DynamicResource ExpandCollapseButton}"/>
-                        <Button Style="{DynamicResource CloseButton}"/>
+                        <Button Style="{DynamicResource HideButton}">
+                            <Button.Command>
+                                <cmd:HideApplicationCommand/>
+                            </Button.Command>
+                        </Button>
+                        <Button Style="{DynamicResource ExpandCollapseButton}">
+                            <Button.Command>
+                                <cmd:ExpandApplicationCommand/>
+                            </Button.Command>
+                        </Button>
+                        <Button Style="{DynamicResource CloseButton}">
+                            <Button.Command>
+                                <cmd:CloseApplicationCommand/>
+                            </Button.Command>
+                        </Button>
                     </StackPanel>
                 </Grid>
             </Border>
@@ -72,7 +95,7 @@
                         FontSize="12"
                         Margin="40,0,10,0"/>
                 </StackPanel>
-            </StackPanel>
+            </StackPanel> <!--Logo-->
             <StackPanel 
                 Margin="0,10,0,0"
                 Grid.Row="2">
@@ -120,7 +143,7 @@
                     <DataTemplate DataType="{x:Type viewmodels:AccountAttachmentsViewModel}">
                         <pages:AccountAttachmentsPage/>
                     </DataTemplate>
-                    <DataTemplate  DataType="{x:Type viewmodels:AccountActivitiesViewModel}">
+                    <DataTemplate DataType="{x:Type viewmodels:AccountActivitiesViewModel}">
                         <pages:AccountActivitiesPage/>
                     </DataTemplate>
                 </ContentControl.Resources> <!--NavigationPages-->

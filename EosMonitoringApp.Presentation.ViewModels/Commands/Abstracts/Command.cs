@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace EosMonitoringApp.Presentation.ViewModels.Commands.Abstracts
 {
-    internal abstract class Command : ICommand
+    public abstract class Command : ICommand
     {
         public event EventHandler CanExecuteChanged
         {

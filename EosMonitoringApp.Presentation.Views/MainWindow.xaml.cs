@@ -20,14 +20,55 @@ namespace EosMonitoringApp.Presentation.Views
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool mRestoreForDragMove;
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Grid_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Grid_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            this.DragMove();
+            if (e.ClickCount == 2)
+            {
+                if (ResizeMode != ResizeMode.CanResize &&
+                    ResizeMode != ResizeMode.CanResizeWithGrip)
+                {
+                    return;
+                }
+
+                WindowState = WindowState == WindowState.Maximized
+                    ? WindowState.Normal
+                    : WindowState.Maximized;
+            }
+            else
+            {
+                mRestoreForDragMove = WindowState == WindowState.Maximized;
+                DragMove();
+            }
         }
+
+        private void Grid_OnMouseMove(object sender, MouseEventArgs e)
+        {
+            if (mRestoreForDragMove)
+            {
+                mRestoreForDragMove = false;
+
+                var point = PointToScreen(e.MouseDevice.GetPosition(this));
+
+                Left = point.X - (RestoreBounds.Width * 0.5);
+                Top = point.Y;
+
+                WindowState = WindowState.Normal;
+
+                DragMove();
+            }
+        }
+
+        private void Grid_OnMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            mRestoreForDragMove = false;
+        }
+
     }
 }

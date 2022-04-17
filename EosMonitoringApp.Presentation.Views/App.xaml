@@ -9,12 +9,12 @@
         <ResourceDictionary>
             <local:ViewModelLocator x:Key="ViewModelLocator"/>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Themes/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/Buttons/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/XamlImage.xaml"/>
                 <ResourceDictionary Source="Themes/HomeTextBlockTheme.xaml"/>
-                <ResourceDictionary Source="Themes/CloseButtonTheme.xaml"/>
-                <ResourceDictionary Source="Themes/ExpandCollapseButtonTheme.xaml"/>
-                <ResourceDictionary Source="Themes/HideButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/Buttons/CloseButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/Buttons/ExpandCollapseButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/Buttons/HideButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
