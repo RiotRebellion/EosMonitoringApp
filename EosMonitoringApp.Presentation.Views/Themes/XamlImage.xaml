@@ -1,6 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style x:Key="XamlImage" TargetType="ContentControl">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate 
@@ -8,7 +10,7 @@
                     <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Name="svg1469" Width=".5" Height="50.0" HorizontalAlignment="Center" Margin="0,10,0,0"
                             VerticalAlignment="Center">
                         <Canvas.RenderTransform>
-                            <TranslateTransform X="-6" Y="77"/>
+                            <TranslateTransform X="-50" Y="77"/>
                         </Canvas.RenderTransform>
                         <Canvas.Resources/>
                         <Canvas Name="g1467">

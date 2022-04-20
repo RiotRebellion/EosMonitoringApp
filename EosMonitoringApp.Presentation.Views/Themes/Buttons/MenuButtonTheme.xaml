@@ -5,6 +5,7 @@
            x:Key="MenuButtonTheme">
         <Style.Setters>
             <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="RadioButton">
@@ -13,7 +14,8 @@
                               Background="{TemplateBinding Background}">
                             <TextBlock Text="{TemplateBinding Content}"
                                        VerticalAlignment="Center"
-                                       Margin="40,0,0,0"/>
+                                       HorizontalAlignment="Left"
+                                       Margin="30,0,0,0"/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
@@ -25,11 +27,12 @@
 
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Background" Value="#22202f"/>
+                <Setter Property="Background" Value="#464169"/>
+                <Setter Property="FontWeight" Value="Heavy"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="#39364f"/>
-                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="FontWeight" Value="Heavy"/>
             </Trigger>
         </Style.Triggers>
     </Style>
