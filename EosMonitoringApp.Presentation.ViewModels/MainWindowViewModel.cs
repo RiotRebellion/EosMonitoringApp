@@ -1,20 +1,44 @@
-﻿using EosMonitoringApp.Domain.Entities;
-using EosMonitoringApp.Presentation.ViewModels.Common;
-using EosMonitoringApp.Services.Interfaces;
-using System;
-using System.Windows;
-using System.Collections.ObjectModel;
-using System.Windows.Controls;
+﻿using EosMonitoringApp.Presentation.ViewModels.Common;
 using System.Windows.Input;
-using System.Windows.Navigation;
+using EosMonitoringApp.Presentation.ViewModels.Commands;
 
 namespace EosMonitoringApp.Presentation.ViewModels
 {
     public class MainWindowViewModel : ViewModel
     {
-        public MainWindowViewModel()
+        private readonly AccountActivitiesViewModel _accountActivitiesViewModel;
+        private readonly AccountAttachmentsViewModel _accountAttachmentsViewModel;
+        private readonly CabinetAttachmentsViewModel _cabinetAttachmentsViewModel;
+        private readonly DeletedPersonsViewModel _deletedPersonViewModel;
+        private readonly EmployeeChangesViewModel _employeeChangesViewModel;
+
+        public MainWindowViewModel(AccountActivitiesViewModel accountActivitiesViewModel,
+                                   AccountAttachmentsViewModel accountAttachmentsViewModel,
+                                   CabinetAttachmentsViewModel cabinetAttachmentsViewModel,
+                                   DeletedPersonsViewModel deletedPersonViewModel,
+                                   EmployeeChangesViewModel employeeChangesViewModel)
         {
+            _accountActivitiesViewModel = accountActivitiesViewModel;
+            _accountAttachmentsViewModel = accountAttachmentsViewModel;
+            _cabinetAttachmentsViewModel = cabinetAttachmentsViewModel;
+            _deletedPersonViewModel = deletedPersonViewModel;
+            _employeeChangesViewModel = employeeChangesViewModel;
+
+            #region Fiels/Properties
+
             CurrentViewModel = new HomeViewModel();
+
+            #endregion
+
+            #region Commands
+
+            ShowAccountActivitiesView = new RelayCommand(OnShowAccountActivitiesViewExecute);
+            ShowAccountAttachmentsView = new RelayCommand(OnShowAccountAttachmentsViewExecute);
+            ShowCabinetAttachmentsView = new RelayCommand(OnShowCabinetAttachmentsViewExecute);
+            ShowDeletedPersonView = new RelayCommand(OnShowDeletedPersonViewExecute);
+            ShowEmployeeChangesView = new RelayCommand(OnShowEmployeeChangesViewExecute);
+
+            #endregion
         }
 
         #region Properties
@@ -31,28 +55,64 @@ namespace EosMonitoringApp.Presentation.ViewModels
 
         #endregion
 
-        #region AccountActivities
-
-        private ObservableCollection<AccountActivity> _accountActivities;
-
-        public ObservableCollection<AccountActivity> AccountActivities
-        {
-            get => _accountActivities;
-            set => Set(ref _accountActivities, value);
-        }
-
-        #endregion
-
         #endregion
 
         #region Commands
 
-        public ICommand OpenAccountActivitiesView { get; private set; }
-        
-        public void OnOpenAccountActivitiesView(object p)
+        #region ShowAccountActivitiesView
+
+        public ICommand ShowAccountActivitiesView { get; private set; }
+
+        private void OnShowAccountActivitiesViewExecute(object p)
         {
-            CurrentViewModel = new AccountActivitiesViewModel();
+            CurrentViewModel = _accountActivitiesViewModel;
         }
+
+        #endregion
+
+        #region ShowAccountAttachmentsView
+
+        public ICommand ShowAccountAttachmentsView { get; private set; }
+
+        private void OnShowAccountAttachmentsViewExecute(object p)
+        {
+            CurrentViewModel = _accountAttachmentsViewModel;
+        }
+
+        #endregion
+
+        #region ShowCabinetAttachmentsView
+
+        public ICommand ShowCabinetAttachmentsView { get; private set; }
+
+        private void OnShowCabinetAttachmentsViewExecute(object p)
+        {
+            CurrentViewModel = _cabinetAttachmentsViewModel;
+        }
+
+        #endregion
+
+        #region ShowDeletedPersonView
+
+        public ICommand ShowDeletedPersonView { get; private set; }
+
+        private void OnShowDeletedPersonViewExecute(object p)
+        {
+            CurrentViewModel = _deletedPersonViewModel;
+        }
+
+        #endregion
+
+        #region ShowEmployeeChangesView
+
+        public ICommand ShowEmployeeChangesView { get; private set; }
+
+        private void OnShowEmployeeChangesViewExecute(object p)
+        {
+            CurrentViewModel = _employeeChangesViewModel;
+        }
+
+        #endregion
 
         #endregion
 

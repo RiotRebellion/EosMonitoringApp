@@ -16,5 +16,6 @@ namespace EosMonitoringApp.Presentation.Views
         public AccountAttachmentsViewModel AccountAttachmentsViewModel => App.Services.GetRequiredService<AccountAttachmentsViewModel>();
         public CabinetAttachmentsViewModel CabinetAttachmentsViewModel => App.Services.GetRequiredService<CabinetAttachmentsViewModel>();
         public EmployeeChangesViewModel EmployeeChangesViewModel => App.Services.GetRequiredService<EmployeeChangesViewModel>();
+        public DeletedPersonsViewModel DeletedPersonsViewModel => App.Services.GetRequiredService<DeletedPersonsViewModel>();
     }
 }

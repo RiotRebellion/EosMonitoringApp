@@ -103,27 +103,32 @@
                     Content="Выгрузка из базы 1С"
                     Height="50"
                     Foreground="White"
-                    Style="{DynamicResource MenuButtonTheme}"/>
+                    Style="{DynamicResource MenuButtonTheme}"
+                    Command="{Binding ShowEmployeeChangesView}"/>
                 <RadioButton 
                     Content="Прикрепление к кабинету"
                     Height="50"
                     Foreground="White"
-                    Style="{DynamicResource MenuButtonTheme}"/>
+                    Style="{DynamicResource MenuButtonTheme}"
+                    Command="{Binding ShowCabinetAttachmentsView}"/>
                 <RadioButton 
                     Content="Наличие учетной записи"
                     Height="50"
                     Foreground="White"
-                    Style="{DynamicResource MenuButtonTheme}"/>
+                    Style="{DynamicResource MenuButtonTheme}"
+                    Command="{Binding ShowAccountAttachmentsView}"/>
                 <RadioButton 
                     Content="Удаленные ДЛ"
                     Height="50"
                     Foreground="White"
-                    Style="{DynamicResource MenuButtonTheme}"/>
+                    Style="{DynamicResource MenuButtonTheme}"
+                    Command="{Binding ShowDeletedPersonView}"/>
                 <RadioButton 
                     Content="Активность пользователей"
                     Height="50"
                     Foreground="White"
-                    Style="{DynamicResource MenuButtonTheme}"/>
+                    Style="{DynamicResource MenuButtonTheme}"
+                    Command="{Binding ShowAccountActivitiesView}"/>
             </StackPanel> <!--MenuButtonPanel-->
             <ContentControl
                 Grid.RowSpan="2"
@@ -145,6 +150,9 @@
                     </DataTemplate>
                     <DataTemplate DataType="{x:Type viewmodels:AccountActivitiesViewModel}">
                         <pages:AccountActivitiesPage/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type viewmodels:DeletedPersonsViewModel}">
+                        <pages:DeletedPersonsPage/>
                     </DataTemplate>
                 </ContentControl.Resources> <!--NavigationPages-->
             </ContentControl>

@@ -5,10 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EosMonitoringApp.Presentation.ViewModels.Stores
+namespace EosMonitoringApp.Presentation.ViewModels
 {
-    internal class NavigationStore
+    public class DeletedPersonsViewModel : ViewModel
     {
-        public ViewModel CurrentViewModel { get; set; }
+        public DeletedPersonsViewModel()
+        {
+
+        }
     }
 }
