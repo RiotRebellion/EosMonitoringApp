@@ -2,20 +2,25 @@
 using EosMonitoringApp.Domain.Interfaces;
 using EosMonitoringApp.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace EosMonitoringApp.Infrastructure.Data.Repositories
 {
     public class CabinetRepository : IGenericRepository<Cabinet>
     {
-        private readonly IDbContext _dbContext;
+        private readonly DbSet<Cabinet> _dbSet;
         private readonly string _query =
             "";
 
         public CabinetRepository(IDeloDbContext context)
         {
-            _dbContext = context;
+            _dbSet = context.Set<Cabinet>();
         }
 
-        public IQueryable<Cabinet> GetAll() => _dbContext.Set<Cabinet>().FromSqlRaw(_query);
+        public IQueryable<Cabinet> GetAll() => _dbSet.FromSqlRaw(_query);
     }
 }
