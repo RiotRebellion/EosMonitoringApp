@@ -2,18 +2,13 @@
 using EosMonitoringApp.Domain.Interfaces;
 using EosMonitoringApp.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EosMonitoringApp.Infrastructure.Data.Repositories
 {
     public class AccountActivityRepository : IGenericRepository<AccountActivity>
     {
-        private readonly IDbContext dbContext;
-        private readonly string query =
+        private readonly IDbContext _dbContext;
+        private readonly string _query =
             "USE DELO_DB " +
             "SELECT SURNAME_PATRON as AccountName, " +
             "ISNULL(MAX(DATE_TIME),  '1900-01-01 00:00:00') as LastAutorizationDate, " +
@@ -29,9 +24,9 @@ namespace EosMonitoringApp.Infrastructure.Data.Repositories
 
         public AccountActivityRepository(IDeloDbContext context)
         {
-            dbContext = context;
+            _dbContext = context;
         }
 
-        public IQueryable<AccountActivity> GetAll() => dbContext.Set<AccountActivity>().FromSqlRaw(query);
+        public IQueryable<AccountActivity> GetAll() => _dbContext.Set<AccountActivity>().FromSqlRaw(_query);
     }
 }

@@ -2,24 +2,19 @@
 using EosMonitoringApp.Domain.Interfaces;
 using EosMonitoringApp.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EosMonitoringApp.Infrastructure.Data.Repositories
 {
     public class AccountRepository : IGenericRepository<Account>
     {
-        private readonly DbSet<Account> _dbSet;
+        private readonly IDbContext _dbContext;
         private readonly string _query = "";
 
         public AccountRepository(IDeloDbContext context)
         {
-            _dbSet = context.Set<Account>();
+            _dbContext = context;
         }
 
-        public IQueryable<Account> GetAll() => _dbSet.FromSqlRaw(_query);
+        public IQueryable<Account> GetAll() => _dbContext.Set<Account>().FromSqlRaw(_query);
     }
 }
