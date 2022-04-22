@@ -17,7 +17,6 @@
                 <ResourceDictionary Source="Themes/Buttons/HideButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/Buttons/ToolButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/Common/TextBlockTheme.xaml"/>
-                <ResourceDictionary Source="Themes/Common/GroupBoxTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

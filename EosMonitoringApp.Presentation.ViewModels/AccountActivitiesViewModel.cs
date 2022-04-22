@@ -12,21 +12,23 @@ namespace EosMonitoringApp.Presentation.ViewModels
 {
     public class AccountActivitiesViewModel : ViewModel
     {
-        public AccountActivitiesViewModel(ILoadService<AccountActivity> service)
+        private IDataImportService<AccountActivity> _service;
+
+        public AccountActivitiesViewModel(IDataImportService<AccountActivity> service)
         {
-            AccountActivitiesCollection = service.Process();
+            _service = service;
         }
 
         #region Properties
 
-        #region AccountActivitiesCollection
+        #region AccountActivityCollection
 
-        private ObservableCollection<AccountActivity> _accountActivitiesCollection;
+        private ObservableCollection<AccountActivity> _accountActivityCollection;
 
-        public ObservableCollection<AccountActivity> AccountActivitiesCollection
+        public ObservableCollection<AccountActivity> AccountActivityCollection
         {
-            get => _accountActivitiesCollection;
-            set => Set(ref _accountActivitiesCollection, value);
+            get => _accountActivityCollection;
+            set => Set(ref _accountActivityCollection, value);
         }
 
         #endregion
