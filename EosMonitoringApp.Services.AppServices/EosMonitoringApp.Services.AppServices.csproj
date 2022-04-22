@@ -11,4 +11,8 @@
     <ProjectReference Include="..\EosMonitoringApp.Services.Interfaces\EosMonitoringApp.Services.Interfaces.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+
 </Project>

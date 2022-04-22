@@ -18,5 +18,10 @@ namespace EosMonitoringApp.Infrastructure.Data.Context
         }
 
         public DbSet<Employee> Employees { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Employee>().HasNoKey();
+        }
     }
 }

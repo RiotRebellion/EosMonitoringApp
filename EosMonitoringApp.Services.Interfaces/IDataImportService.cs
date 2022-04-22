@@ -3,8 +3,10 @@ using System.Collections.ObjectModel;
 
 namespace EosMonitoringApp.Services.Interfaces
 {
-    public interface ILoadService<T> where T : IEntity
+    public interface IDataImportService<T> where T : IEntity
     {
-        ObservableCollection<T> Process();
+        IEnumerable<T> ImportFromDatabase();
+
+        IEnumerable<T> ImportFromXML();
     }
 }

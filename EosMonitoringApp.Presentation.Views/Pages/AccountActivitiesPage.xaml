@@ -9,7 +9,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <DataGrid
-            ItemsSource="{Binding AccountActivitiesCollection}">
+            ItemsSource="{Binding AccountActivityCollection}">
             
         </DataGrid>
     </Grid>
