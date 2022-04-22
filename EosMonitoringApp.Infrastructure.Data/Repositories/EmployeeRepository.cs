@@ -12,24 +12,17 @@ namespace EosMonitoringApp.Infrastructure.Data.Repositories
 {
     public class EmployeeRepository : IGenericRepository<Employee>
     {
-        private readonly IMiraDbContext _dbContext;
-        private string _query =
-            "USE istu1c " +
-            "SELECT c1staff.name AS Name," +
-            "c1department.name AS Department, " +
-            "c1staff.post AS Post, " +
-            "c1staff.deleted AS Status " +
-            "FROM c1staff " +
-            "JOIN c1department ON c1staff.departmentGUID = c1department.id " +
-            "WHERE c1staff.deleted = 0 " +
-            "ORDER BY Department, Name";
-
+        private DbSet<Employee> _dbSet;
+        private string _query;
 
         public EmployeeRepository(IMiraDbContext context)
         {
-            _dbContext = context;
+            _dbSet = context.Set<Employee>();
         }
 
-        public IEnumerable<Employee> GetAll() => _dbContext.Set<Employee>().FromSqlRaw(_query);
+        public IQueryable<Employee> GetAll()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

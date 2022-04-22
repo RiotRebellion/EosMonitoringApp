@@ -12,17 +12,10 @@ namespace EosMonitoringApp.Services.AppServices
     public static class DependencyInjection
     {
         public static IServiceCollection AddServices(this IServiceCollection services) => services
-            .AddImportServices()
-            .AddExportServices();
-
-        private static IServiceCollection AddImportServices(this IServiceCollection services) => services
-            .AddScoped<IDataImportService<Account>, DataImportService<Account>>()
-            .AddScoped<IDataImportService<AccountActivity>, DataImportService<AccountActivity>>()
-            .AddScoped<IDataImportService<Cabinet>, DataImportService<Cabinet>>()
-            .AddScoped<IDataImportService<Employee>, DataImportService<Employee>>()
+            .AddScoped<ILoadService<Account>, LoadService<Account>>()
+            .AddScoped<ILoadService<AccountActivity>, LoadService<AccountActivity>>()
+            .AddScoped<ILoadService<Cabinet>, LoadService<Cabinet>>()
+            .AddScoped<ILoadService<Employee>, LoadService<Employee>>()
             ;
-
-        private static IServiceCollection AddExportServices(this IServiceCollection services) => services
-            .AddScoped<IDataExportService<Employee>, DataExportService<Employee>>();
     }
 }

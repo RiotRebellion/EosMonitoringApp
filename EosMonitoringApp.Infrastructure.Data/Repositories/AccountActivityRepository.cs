@@ -32,6 +32,6 @@ namespace EosMonitoringApp.Infrastructure.Data.Repositories
             dbContext = context;
         }
 
-        public IEnumerable<AccountActivity> GetAll() => dbContext.Set<AccountActivity>().FromSqlRaw(query);
+        public IQueryable<AccountActivity> GetAll() => dbContext.Set<AccountActivity>().FromSqlRaw(query);
     }
 }

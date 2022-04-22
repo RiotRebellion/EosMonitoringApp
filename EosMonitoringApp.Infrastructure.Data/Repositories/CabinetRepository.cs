@@ -21,6 +21,6 @@ namespace EosMonitoringApp.Infrastructure.Data.Repositories
             _dbSet = context.Set<Cabinet>();
         }
 
-        public IEnumerable<Cabinet> GetAll() => _dbSet.FromSqlRaw(_query);
+        public IQueryable<Cabinet> GetAll() => _dbSet.FromSqlRaw(_query);
     }
 }

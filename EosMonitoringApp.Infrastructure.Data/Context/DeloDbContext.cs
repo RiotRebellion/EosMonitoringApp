@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace EosMonitoringApp.Infrastructure.Data.Context
 {
-    public class DeloDbContext : DbContext, IDeloDbContext
+    public partial class DeloDbContext : DbContext, IDeloDbContext
     {
-        public DeloDbContext(DbContextOptions<DeloDbContext> options)
+        public DeloDbContext(DbContextOptions options)
             : base(options)
         {
         }

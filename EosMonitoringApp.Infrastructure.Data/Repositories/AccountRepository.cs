@@ -20,6 +20,6 @@ namespace EosMonitoringApp.Infrastructure.Data.Repositories
             _dbSet = context.Set<Account>();
         }
 
-        public IEnumerable<Account> GetAll() => _dbSet.FromSqlRaw(_query);
+        public IQueryable<Account> GetAll() => _dbSet.FromSqlRaw(_query);
     }
 }

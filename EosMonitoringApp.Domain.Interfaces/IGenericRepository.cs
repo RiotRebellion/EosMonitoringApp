@@ -9,6 +9,6 @@ namespace EosMonitoringApp.Domain.Interfaces
     public interface IGenericRepository<Tentity>
         where Tentity : IEntity
     {
-        IEnumerable<Tentity> GetAll();        
+        IQueryable<Tentity> GetAll();        
     }
 }
