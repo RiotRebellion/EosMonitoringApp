@@ -2,17 +2,12 @@
 using EosMonitoringApp.Domain.Interfaces;
 using EosMonitoringApp.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EosMonitoringApp.Infrastructure.Data.Repositories
 {
     public class AccountActivityRepository : IGenericRepository<AccountActivity>
     {
-        private readonly IDbContext dbContext;
+        private readonly IDeloDbContext _dbContext;
         private readonly string query =
             "USE DELO_DB " +
             "SELECT SURNAME_PATRON as AccountName, " +
@@ -29,9 +24,9 @@ namespace EosMonitoringApp.Infrastructure.Data.Repositories
 
         public AccountActivityRepository(IDeloDbContext context)
         {
-            dbContext = context;
+            _dbContext = context;
         }
 
-        public IEnumerable<AccountActivity> GetAll() => dbContext.Set<AccountActivity>().FromSqlRaw(query);
+        public IEnumerable<AccountActivity> GetAll() => _dbContext.Set<AccountActivity>().FromSqlRaw(query);
     }
 }

@@ -9,20 +9,20 @@ namespace EosMonitoringApp.Presentation.ViewModels
         private readonly AccountActivitiesViewModel _accountActivitiesViewModel;
         private readonly AccountAttachmentsViewModel _accountAttachmentsViewModel;
         private readonly CabinetAttachmentsViewModel _cabinetAttachmentsViewModel;
-        private readonly DeletedPersonsViewModel _deletedPersonViewModel;
+        private readonly InvalidPersonsViewModel _deletedPersonViewModel;
         private readonly EmployeeChangesViewModel _employeeChangesViewModel;
 
-        public MainWindowViewModel(AccountActivitiesViewModel accountActivitiesViewModel,
+        public MainWindowViewModel(
                                    AccountAttachmentsViewModel accountAttachmentsViewModel,
                                    CabinetAttachmentsViewModel cabinetAttachmentsViewModel,
-                                   DeletedPersonsViewModel deletedPersonViewModel,
-                                   EmployeeChangesViewModel employeeChangesViewModel)
+                                   InvalidPersonsViewModel deletedPersonViewModel,
+                                   EmployeeChangesViewModel employeeChangesViewModel, AccountActivitiesViewModel accountActivitiesViewModel)
         {
-            _accountActivitiesViewModel = accountActivitiesViewModel;
             _accountAttachmentsViewModel = accountAttachmentsViewModel;
             _cabinetAttachmentsViewModel = cabinetAttachmentsViewModel;
             _deletedPersonViewModel = deletedPersonViewModel;
             _employeeChangesViewModel = employeeChangesViewModel;
+            _accountActivitiesViewModel = accountActivitiesViewModel;
 
             #region Fiels/Properties
 

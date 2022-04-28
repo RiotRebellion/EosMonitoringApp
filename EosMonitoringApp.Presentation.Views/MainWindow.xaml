@@ -152,8 +152,8 @@
                     <DataTemplate DataType="{x:Type viewmodels:AccountActivitiesViewModel}">
                         <pages:AccountActivitiesPage/>
                     </DataTemplate>
-                    <DataTemplate DataType="{x:Type viewmodels:DeletedPersonsViewModel}">
-                        <pages:DeletedPersonsPage/>
+                    <DataTemplate DataType="{x:Type viewmodels:InvalidPersonsViewModel}">
+                        <pages:InvalidPersonsPage/>
                     </DataTemplate>
                 </ContentControl.Resources> <!--NavigationPages-->
             </ContentControl>

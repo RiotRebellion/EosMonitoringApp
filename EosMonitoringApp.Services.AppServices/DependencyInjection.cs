@@ -20,6 +20,7 @@ namespace EosMonitoringApp.Services.AppServices
             .AddScoped<IDataImportService<AccountActivity>, DataImportService<AccountActivity>>()
             .AddScoped<IDataImportService<Cabinet>, DataImportService<Cabinet>>()
             .AddScoped<IDataImportService<Employee>, DataImportService<Employee>>()
+            .AddScoped<IDataImportService<InvalidPerson>, DataImportService<InvalidPerson>>()
             ;
 
         private static IServiceCollection AddExportServices(this IServiceCollection services) => services

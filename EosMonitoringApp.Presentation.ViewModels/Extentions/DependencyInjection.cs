@@ -17,7 +17,7 @@ namespace EosMonitoringApp.Presentation.ViewModels.Extentions
             .AddSingleton<AccountAttachmentsViewModel>()
             .AddSingleton<CabinetAttachmentsViewModel>()
             .AddSingleton<EmployeeChangesViewModel>()
-            .AddSingleton<DeletedPersonsViewModel>();
+            .AddSingleton<InvalidPersonsViewModel>();
         
     }
 }

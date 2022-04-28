@@ -19,7 +19,7 @@ namespace EosMonitoringApp.Presentation.ViewModels
         public EmployeeChangesViewModel(IDataImportService<Employee> importService)
         {
             _importService = importService;
-            EmployeeCollection = new ObservableCollection<Employee>(_importService.ImportFromDatabase());
+
             #region Registration
 
             #region Commands

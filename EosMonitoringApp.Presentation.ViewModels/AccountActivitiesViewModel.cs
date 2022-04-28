@@ -17,6 +17,7 @@ namespace EosMonitoringApp.Presentation.ViewModels
         public AccountActivitiesViewModel(IDataImportService<AccountActivity> service)
         {
             _service = service;
+            AccountActivityCollection = new ObservableCollection<AccountActivity>(service.ImportFromDatabase());
         }
 
         #region Properties

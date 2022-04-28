@@ -2,11 +2,6 @@
 using EosMonitoringApp.Domain.Interfaces;
 using EosMonitoringApp.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EosMonitoringApp.Infrastructure.Data.Repositories
 {
@@ -14,7 +9,6 @@ namespace EosMonitoringApp.Infrastructure.Data.Repositories
     {
         private readonly IMiraDbContext _dbContext;
         private string _query =
-            "USE istu1c " +
             "SELECT c1staff.name AS Name," +
             "c1department.name AS Department, " +
             "c1staff.post AS Post, " +

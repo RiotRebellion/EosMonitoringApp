@@ -6,18 +6,10 @@ namespace EosMonitoringApp.Domain.Entities
     {
         public string Department { get; set; } = null!;
 
-        public string CabinetName { get; set; } = null!;
+        public string Cabinet { get; set; } = null!;
 
-        public string? AccountName { get; set; }
+        public string? Username { get; set; }
 
         public string? FolderAccess { get; set; }
-
-        public string? Employee { get; set; }
-
-        public enum Status
-        {
-            Действительный = 0,
-            Недействительный
-        }
     }
 }

@@ -9,7 +9,7 @@ namespace EosMonitoringApp.Domain.Entities
 
         public DateTime? LastAutorizationDate { get; set; }
 
-        public int? DaysGone { get; set; }
+        public int DaysGone { get; set; }
 
     }
 }

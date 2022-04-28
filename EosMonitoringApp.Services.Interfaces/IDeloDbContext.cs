@@ -1,7 +1,9 @@
-﻿namespace EosMonitoringApp.Services.Interfaces
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace EosMonitoringApp.Services.Interfaces
 {
-    public interface IDeloDbContext : IDbContext
+    public interface IDeloDbContext
     {
-        
+        DbSet<TEntity> Set<TEntity>() where TEntity : class;
     }
 }
